@@ -1,12 +1,15 @@
-def get_puzzle_input(example_input:bool):
+def get_puzzle_input(example_input: bool):
 
-    return """3   4
+    return (
+        """3   4
 4   3
 2   5
 1   3
 3   9
 3   3
-""" if example_input else """15131   78158
+"""
+        if example_input
+        else """15131   78158
 32438   35057
 12503   57702
 73808   43128
@@ -1006,3 +1009,4 @@ def get_puzzle_input(example_input:bool):
 47082   89946
 91778   85851
 99760   37363"""
+    )
