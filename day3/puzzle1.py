@@ -4,7 +4,7 @@ import re
 
 def run_process(input: str) -> int:
     mult_regex = r"mul\(\d{1,3},\d{1,3}\)"
-    
+
     total = 0
 
     # fetch all the places that input matches mult_regex
@@ -14,5 +14,6 @@ def run_process(input: str) -> int:
         total += int(before_comma) * int(after_comma)
 
     return total
+
 
 print(run_process(get_puzzle_input(False)))
