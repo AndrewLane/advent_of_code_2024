@@ -1,12 +1,12 @@
-input = """3   4
+def get_puzzle_input(example_input:bool):
+
+    return """3   4
 4   3
 2   5
 1   3
 3   9
 3   3
-"""
-
-input = """15131   78158
+""" if example_input else """15131   78158
 32438   35057
 12503   57702
 73808   43128
@@ -1006,24 +1006,3 @@ input = """15131   78158
 47082   89946
 91778   85851
 99760   37363"""
-
-def run_process(input):
-    list1 = []
-    list2 = []
-    for line in input.splitlines():
-        if line.strip() == "":
-            continue
-        list1entry, list2entry = line.split()
-        list1.append(int(list1entry))
-        list2.append(int(list2entry))
-
-    list1 = sorted(list1)
-    list2 = sorted(list2)
-
-    total = 0
-    for list1entry, list2entry in zip(list1, list2):
-        total += abs(list1entry - list2entry)
-    return total
-
-
-print(run_process(input))
